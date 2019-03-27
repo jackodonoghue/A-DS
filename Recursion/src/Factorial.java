@@ -3,7 +3,6 @@
 public class Factorial {
     public static void main(String[] args) {
         System.out.print(factorial(5));
-        System.out.print("\n" + myPow(5, 3));
         System.out.print("\n" + reverse("jack"));
     }
    
@@ -19,22 +18,12 @@ public class Factorial {
       }
    }
 
-   public static double myPow(double x, int y) {
-        if(y == 0) {
-            return 1;
-        }else{
-            double currPow = myPow(x, y-1);
-            double res = x * currPow;
-            return res;
-        }
-   }
-
    public static String reverse(String in) {
         if(in.isEmpty()) {
             return in;
         }else{
             char recStr = in.charAt(0);
-            String res = reverse(in.substring(1))    + recStr;
+            String res = reverse(in.substring(1)) + recStr;
             return res;
         }
    }

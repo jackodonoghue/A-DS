@@ -2,8 +2,9 @@ public class MyArraysDriver {
     private static int currentSize = 0;
 
     public static void main(String[] args) {
-        int[] values = new int[5];
+        int[] values = new int[]{6,7,4,7,2,6};
         String st = "";
+/*
 
         //Run 1: Expected Outcome = 1
 
@@ -33,10 +34,24 @@ public class MyArraysDriver {
 
         currentSize = MyArrays.insert(values, currentSize, 3, 9);
 
+
         for(int i = 0; i < values.length; i++) {
             st += ", " + values[i];
         }
 
-        System.out.println(currentSize + " " + st);
+        System.out.println(currentSize + " " + st);*/
+
+        int[] newArr = MyArrays.mergeSort(values);
+
+        for(int i = 0; i < newArr.length; i++) {
+            System.out.println(newArr[i]);
+        }
+
+        if(MyArrays.binarySearch(values, 5))
+             System.out.print("\n\n\n YESSSS");
+        else
+            System.out.print("\n\n\nNOOOO");
+
+
     }
 }
